@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>نتيجة الثانوية العامة</title>
+  <style>
+    body {
+      direction: rtl;
+      font-family: 'Cairo', sans-serif;
+      background-color: #f9f9f9;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #006699;
+      font-size: 32px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      width: 250px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #006699;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #004466;
+    }
+
+    #result {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #333;
+      background-color: #e6f2ff;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>اعرف نتيجتك الآن</h1>
+  <input type="text" id="seatNumber" placeholder="اكتب رقم الجلوس">
+  <br>
+  <button onclick="showResult()">عرض النتيجة</button>
+
+  <div id="result"></div>
+
+  <script>
+    function showResult() {
+      const seat = document.getElementById("seatNumber").value;
+      const resultBox = document.getElementById("result");
+
+      if (seat === "123456") {
+        resultBox.innerHTML = `
+          الاسم: أحمد محمد
